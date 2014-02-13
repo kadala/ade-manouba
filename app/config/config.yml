@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: assetic.yml }
     
     # Sonata Bundles
     - { resource: sonata/sonata_admin.yml }

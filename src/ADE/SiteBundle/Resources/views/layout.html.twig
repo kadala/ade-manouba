@@ -1,0 +1,153 @@
+{% extends '::base.html.twig' %}
+{% block content %}
+<div class="container">
+   {% render (controller("ADESiteBundle:Site:header")) %}
+   <div class="contenu">
+       {% block page_menu_content %}
+	         {% render (controller("ADESiteBundle:Site:menu",{'route': app.request.attributes.get('_route') })) %}
+	   {% endblock %}
+      <div class="banniere-pub">
+         <img src="{{ asset('bundles/adesite/images/banniere.jpg') }}" width="979" height="150" alt="" />
+      </div>
+      <div class="bloc-contenu">
+         <h1>Acceuil</h1>
+         <div class="left-home">
+            <div class="caroussel">
+               <!--  Outer wrapper for presentation only, this can be anything you like -->
+               <div id="banner-slide">
+                  <!-- start Basic Jquery Slider -->
+                  <ul class="bjqs">
+                     <li><a href=""><img src="{{ asset('bundles/adesite/images/im1.jpg') }}" title="Automatically generated caption" alt="" /></a></li>
+                     <li><img src="{{ asset('bundles/adesite/images/im2.jpg') }}" title="Automatically generated caption" alt="" /></li>
+                     <li><img src="{{ asset('bundles/adesite/images/im3.jpg') }}" title="Automatically generated caption" alt="" /></li>
+                  </ul>
+                  <!-- end Basic jQuery Slider -->
+               </div>
+               <!-- End outer wrapper -->
+               <!-- attach the plug-in to the slider parent element and adjust the settings as required -->
+               <script class="secret-source" type="text/javascript">
+                  jQuery(document).ready(function($) {
+                    
+                    $('#banner-slide').bjqs({
+                      animtype      : 'slide',
+                      height        : 250,
+                      width         : 630,
+                      responsive    : true,
+                      randomstart   : true
+                    });
+                    
+                  });
+               </script>
+           <script type="text/javascript">
+                  jQuery(function($) {
+                  
+                      $('.secret-source').secretSource({
+                          includeTag: false
+                      });
+                  
+                  });
+               </script>
+            </div>
+            <div class="reves-une">
+               <h2>Les rêves à la une</h2>
+               <div class="bloc-reves">
+                  <div class="bloc-reve">
+                     <div class="bloc-img"> <a href="#"><img src="{{ asset('bundles/adesite/images/i1.jpg') }}"  width="150" height="120"  alt="" /></a> </div>
+                     <div class="bloc-txt">
+                        <h3>Bastien courageux face aux tigres...</h3>
+                        <p>Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac !<br />
+                           Bastien courageux face aux tigres. Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre...
+                        </p>
+                        <a href="actu.html" class="lire-plus">Lire plus</a>
+                     </div>
+                  </div>
+                  <div class="bloc-reve last">
+                     <div class="bloc-img"> <a href="#"><img src="{{ asset('bundles/adesite/images/i1.jpg') }}" width="150" height="120" alt="" /></a> </div>
+                     <div class="bloc-txt">
+                        <h3>Bastien courageux face aux tigres...</h3>
+                        <p>Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac !<br />
+                           Bastien courageux face aux tigres. Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre...
+                        </p>
+                        <a href="actu.html" class="lire-plus">Lire plus</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="les-actus">
+               <h2>Les actus</h2>
+               <div class="bloc-actus">
+                  <div class="bloc-actu">
+                     <div class="bloc-img"> <a href="#"><img src="{{ asset('bundles/adesite/images/i1.jpg') }}" width="150" height="120" alt="" /></a> </div>
+                     <div class="bloc-txt">
+                        <h3>Bastien courageux face aux tigres...</h3>
+                        <p>Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac !<br />
+                           Bastien courageux face aux tigres. Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre...
+                        </p>
+                        <a href="actu.html" class="lire-plus">Lire plus</a>
+                     </div>
+                  </div>
+                  <div class="bloc-actu last">
+                     <div class="bloc-img"> <a href="#"><img src="{{ asset('bundles/adesite/images/i1.jpg') }}" width="150" height="120" alt="" /></a> </div>
+                     <div class="bloc-txt">
+                        <h3>Bastien courageux face aux tigres...</h3>
+                        <p>Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac !<br />
+                           Bastien courageux face aux tigres. Une rencontre unique entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre un fauve et un rêveur au Zoo de Pessac entre...
+                        </p>
+                        <a href="actu.html" class="lire-plus">Lire plus</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="right-home">
+            <div class="login">
+               <h2>Bienvenue</h2>
+               <form action="" method="get">
+                  <label for="login">Login :</label>
+                  <input name="login" type="text" id="login" />
+                  <label for="mot-passe">Mot de passe : </label>
+                  <input name="login"  type="password" id="mot-passe" />
+                  <div class="liens-login">
+                     <a href="#">Mot de passe oublié</a> | <a href="#">Devenir partenaire</a>
+                  </div>
+                  <input name="entrez" type="button" value="Entrez" class="entrer" />
+               </form>
+            </div>
+            <div class="video">
+               <iframe width="260" height="195" src="http://www.youtube.com/embed/yqZfjClbagQ" frameborder="0" ></iframe>
+            </div>
+            <div class="caroussel-logos">
+               <!--  Outer wrapper for presentation only, this can be anything you like -->
+               <div id="banner-slide2">
+                  <!-- start Basic Jquery Slider -->
+                  <ul class="bjqs">
+                     <li><img src="{{ asset('bundles/adesite/images/im1.jpg') }}" alt="" /></li>
+                     <li><img src="{{ asset('bundles/adesite/images/im2.jpg') }}" alt="" /></li>
+                     <li><img src="{{ asset('bundles/adesite/images/im3.jpg') }}" alt="" /></li>
+                  </ul>
+                  <!-- end Basic jQuery Slider -->
+               </div>
+               <!-- End outer wrapper -->
+               <!-- attach the plug-in to the slider parent element and adjust the settings as required -->
+               <script class="secret-source" type="text/javascript">
+                  jQuery(document).ready(function($) {
+                    
+                    $('#banner-slide2').bjqs({
+                      animtype      : 'slide',
+                      height        : 140,
+                      width         : 244,
+                      responsive    : true,
+                      randomstart   : true
+                    });
+                    
+                  });
+               </script>
+
+               
+            </div>
+         </div>
+      </div>
+      {% render (controller("ADESiteBundle:Site:footer")) %}
+   </div>
+</div>
+{% endblock %}

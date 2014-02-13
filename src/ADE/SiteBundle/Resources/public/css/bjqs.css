@@ -1,0 +1,31 @@
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:5px;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:5px;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+
+p.bjqs-caption{display:block;width:295px;margin:0;padding:10px;position:absolute;top:0; right:0; height:230px; /*background:#666;*/ background:url(images/bg.png); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+       /*filter: alpha(opacity=50);
+       opacity:.5;*/ color:#FFF;
+	   -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;}
+  
+  
+#banner-slide2 p.bjqs-caption{
+	display:none;
+}
+
+#banner-slide2 ol.bjqs-markers{
+	display:none;
+}
+
+#banner-slide2 ul.bjqs-controls.v-centered li.bjqs-next a{right:-12px;}
+#banner-slide2 ul.bjqs-controls.v-centered li.bjqs-prev a{left:-12px;}
